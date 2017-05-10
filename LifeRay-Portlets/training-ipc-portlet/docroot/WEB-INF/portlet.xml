@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+
+	<portlet>
+		<portlet-name>sender-portlet</portlet-name>
+		<display-name>Sender Portlet</display-name>
+		<portlet-class>
+			com.lfbp.training.liferay.SenderPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/sender/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Sender Portlet</title>
+			<short-title>Sender Portlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-publishing-event>
+            <qname xmlns:x="http://grupodot.com/events">x:ipc-text</qname>
+        </supported-publishing-event>
+	</portlet>
+	<portlet>
+		<portlet-name>arrival-portlet</portlet-name>
+		<display-name>Arrival Portlet</display-name>
+		<portlet-class>
+			com.lfbp.training.liferay.ArrivalPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/arrival/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Arrival Portlet</title>
+			<short-title>Arrival Portlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-processing-event>
+            <qname xmlns:x="http://grupodot.com/events">x:ipc-text</qname>
+        </supported-processing-event>
+	</portlet>
+    <event-definition>
+        <qname xmlns:x="http://grupodot.com/events">x:ipc-text</qname>
+        <value-type>java.lang.String</value-type>
+    </event-definition>
+</portlet-app>
