@@ -6,10 +6,10 @@
  
 <aui:form method="post" action="<%=actionUrl.toString() %>">
  
-<aui:input name="sampleText" label="Ingrese texto"/>
- 
-<aui:button-row>
-    <aui:button type="submit" value="Enviar"/>
-</aui:button-row>
+	<aui:input name="sampleText" label="Ingrese texto"/>
+	 
+	<aui:button-row>
+	    <aui:button type="submit" value="Enviar"/>
+	</aui:button-row>
  
 </aui:form>
